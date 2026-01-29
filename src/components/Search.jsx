@@ -14,7 +14,7 @@ function Search({ cityData, setCityData }) {
         if (!city) return;
         try {
             // console.log(city)
-            const response = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${findCityKey}`)
+            const response = await axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${findCityKey}`)
             if (response) {
                 setData(response.data);
                 setSlicedData(response.data.slice(0, 2));
